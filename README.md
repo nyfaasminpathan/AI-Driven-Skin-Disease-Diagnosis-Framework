@@ -56,8 +56,8 @@ Selected categories were grouped into Bacterial, Viral, Fungal, and Other classe
 Healthy skin images were collected from an external dataset and used as the healthy class for Stage 1 training.
 Due to GitHub size limitations, the datasets are hosted externally.
 Dataset Link:
-
-(Add your dataset link here)
+https://www.kaggle.com/datasets/shubhamgoel27/dermnet
+https://www.kaggle.com/datasets/shakyadissanayake/oily-dry-and-normal-skin-types-dataset
 
 Trained models are stored inside the model/ directory.
 
