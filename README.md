@@ -87,8 +87,8 @@ Due to GitHub size limitations, models are hosted on Google Drive.
 ## 🚀 Running the Application
 
 ### Step 1: Clone the Repository
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com//nyfaasminpathan/AI-Driven-Skin-Disease-Diagnosis-Framework.git
+cd AI-Driven-Skin-Disease-Diagnosis-Framework
 
 ###Step 2: Install Dependencies
 pip install tensorflow keras numpy pandas matplotlib scikit-learn streamlit
