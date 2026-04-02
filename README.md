@@ -90,8 +90,8 @@ Due to GitHub size limitations, models are hosted on Google Drive.
 git clone https://github.com//nyfaasminpathan/AI-Driven-Skin-Disease-Diagnosis-Framework.git
 cd AI-Driven-Skin-Disease-Diagnosis-Framework
 
-###Step 2: Install Dependencies
+### Step 2: Install Dependencies
 pip install tensorflow keras numpy pandas matplotlib scikit-learn streamlit
 
-###Step 3: Run the App
+### Step 3: Run the App
 python app.py
