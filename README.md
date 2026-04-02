@@ -1,72 +1,97 @@
-Two-Stage Skin Disease Classification System
+# Two-Stage Skin Disease Classification System
 
-This project presents a Two-Stage Deep Learning System for Skin Disease Detection and Classification.
-The system first determines whether a skin image is healthy or diseased. If the image is identified as diseased, the system then performs a second level classification to determine the type of disease.
-This approach improves prediction reliability by separating disease detection and disease type classification into two stages.
+This project presents a **Two-Stage Deep Learning System** for skin disease detection and classification.
 
-System Architecture
+The system works in two steps:
+1. Detects whether the skin is **Healthy or Diseased**
+2. If diseased, classifies it into a specific disease category
 
-The project is implemented as a two-stage classification pipeline.
+This two-stage approach improves prediction accuracy and reliability.
 
-Stage 1: Skin Disease Detection
-The first model determines whether the given skin image is:
-->Healthy
-->Diseased
-Dataset used for this stage:
-DermNet Dataset (23 disease categories) → used as diseased images
-Healthy Skin Dataset → used as healthy class
-The model learns to distinguish between normal skin and abnormal skin conditions
+---
 
+## 📌 System Architecture
 
-Stage 2: Disease Type Classification
-If the image is predicted as Diseased in Stage 1, it is passed to the Stage 2 model.
-The Stage 2 model classifies the disease into four categories:
-->Bacterial
-->Fungal
-->Viral
-->Other Skin Diseases
-For this stage, specific disease categories from the DermNet dataset were selected and grouped into the above four classes.
+### 🧪 Stage 1: Skin Disease Detection
+The first model classifies the image into:
+- Healthy
+- Diseased
 
+**Datasets Used:**
+- DermNet Dataset (23 disease categories) → Diseased class  
+- Healthy Skin Dataset → Healthy class  
 
-Project Structure
-project-root 
-│ 
-├── assets/ 
-│       └── UI images and static resources 
-│ ├── model/ 
-│       ├── stage1_model.h5 
-│       └── stage2_model.h5 
-│ ├── pages/ 
-│         └── Analyze.py 
-│ ├── scripts/ 
-│         └── training scripts
-│ ├── app.py 
-│         └── Main application file that runs the UI and integrates both models 
+The model learns to distinguish between normal and abnormal skin conditions.
 
+---
 
-Dataset
+### 🔬 Stage 2: Disease Type Classification
+If the image is predicted as **Diseased**, it is passed to Stage 2.
 
-The datasets used in this project include:
-1. DermNet Dataset
-The DermNet dataset contains multiple categories of skin disease images.
-For this project:
-All 23 disease categories were used in Stage 1 for diseased detection.
-Selected categories were grouped into Bacterial, Viral, Fungal, and Other classes for Stage 2 classification.
-2. Healthy Skin Dataset
-Healthy skin images were collected from an external dataset and used as the healthy class for Stage 1 training.
-Due to GitHub size limitations, the datasets are hosted externally.
-Dataset Link:
-https://www.kaggle.com/datasets/shubhamgoel27/dermnet
-https://www.kaggle.com/datasets/shakyadissanayake/oily-dry-and-normal-skin-types-dataset
+The model classifies into:
+- Bacterial  
+- Fungal  
+- Viral  
+- Other Skin Diseases  
 
-Trained models are stored inside the model/ directory.
+Selected categories from DermNet were grouped into these 4 classes.
+
+---
+
+## 📂 Project Structure
+project-root/
+│
+├── assets/ # UI images and static files
+├── model/ #models
+├── pages/
+│ └── Analyze.py
+├── scripts/ # Training scripts
+├── app.py # Main application file
 
 
----Running the Application---
+---
 
-Step 1: Clone the Repository
-cd your-repository-name
-Step 2: Install Required Libraries(pip install tensorflow keras numpy pandas matplotlib scikit-learn streamlit)
-Step 3: Run the Application
+## 📊 Dataset
+
+### 1. DermNet Dataset
+- Contains multiple skin disease categories
+- Used for:
+  - Stage 1 → Diseased detection
+  - Stage 2 → Grouped classification
+
+🔗 https://www.kaggle.com/datasets/shubhamgoel27/dermnet
+
+---
+
+### 2. Healthy Skin Dataset
+- Used as **Healthy class** in Stage 1
+
+🔗 https://www.kaggle.com/datasets/shakyadissanayake/oily-dry-and-normal-skin-types-dataset
+
+---
+
+## 🤖 Trained Models
+
+Due to GitHub size limitations, models are hosted on Google Drive.
+
+### 📥 Download Models
+  👉 [Download Link](https://drive.google.com/file/d/1iRfBqxMoshvulD6DiDwaW52pVmp7mESa/view?usp=sharing)
+  👉 [Download Link](https://drive.google.com/file/d/1nQQ5aZRwx1cWRqVsyiEymjTjzXHLNepx/view?usp=sharing)
+  👉 [Download Link](https://drive.google.com/file/d/1i6VC9_-JTVnKCNwEzLoZ_DQD9fZXrCJM/view?usp=sharing)
+
+📌 After downloading, place all models inside: model/
+
+
+---
+
+## 🚀 Running the Application
+
+### Step 1: Clone the Repository
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+
+###Step 2: Install Dependencies
+pip install tensorflow keras numpy pandas matplotlib scikit-learn streamlit
+
+###Step 3: Run the App
 python app.py
-After running the command, the application interface will start in your browser.
